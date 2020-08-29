@@ -1,4 +1,4 @@
-module github.com/jenkins-x/go-scm
+module github.com/agill17/go-scm
 
 require (
 	github.com/ghodss/yaml v1.0.0
