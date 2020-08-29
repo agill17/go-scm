@@ -12,8 +12,8 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/jenkins-x/go-scm/pkg/hmac"
-	"github.com/jenkins-x/go-scm/scm"
+	"github.com/agill17/go-scm/pkg/hmac"
+	"github.com/agill17/go-scm/scm"
 )
 
 // TODO(bradrydzewski) push hook does not include commit message

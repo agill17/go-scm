@@ -6,7 +6,7 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/jenkins-x/go-scm/scm"
+	"github.com/agill17/go-scm/scm"
 )
 
 const (

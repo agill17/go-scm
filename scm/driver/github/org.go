@@ -10,7 +10,7 @@ import (
 	"net/http"
 	"net/url"
 
-	"github.com/jenkins-x/go-scm/scm"
+	"github.com/agill17/go-scm/scm"
 )
 
 type organizationService struct {

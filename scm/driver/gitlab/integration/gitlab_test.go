@@ -9,8 +9,8 @@ import (
 	"os"
 	"testing"
 
-	"github.com/jenkins-x/go-scm/scm/driver/gitlab"
-	"github.com/jenkins-x/go-scm/scm/transport"
+	"github.com/agill17/go-scm/scm/driver/gitlab"
+	"github.com/agill17/go-scm/scm/transport"
 )
 
 func TestGitLab(t *testing.T) {

@@ -16,7 +16,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/jenkins-x/go-scm/scm"
+	"github.com/agill17/go-scm/scm"
 	"github.com/shurcooL/graphql"
 )
 

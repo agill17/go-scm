@@ -6,7 +6,7 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/jenkins-x/go-scm/scm"
+	"github.com/agill17/go-scm/scm"
 	"github.com/pkg/errors"
 )
 

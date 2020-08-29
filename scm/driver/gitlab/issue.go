@@ -11,8 +11,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/jenkins-x/go-scm/scm"
-	"github.com/jenkins-x/go-scm/scm/driver/internal/null"
+	"github.com/agill17/go-scm/scm"
+	"github.com/agill17/go-scm/scm/driver/internal/null"
 )
 
 type issueService struct {

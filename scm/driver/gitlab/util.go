@@ -9,7 +9,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/jenkins-x/go-scm/scm"
+	"github.com/agill17/go-scm/scm"
 )
 
 func encode(s string) string {

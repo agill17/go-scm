@@ -9,7 +9,7 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/jenkins-x/go-scm/scm"
+	"github.com/agill17/go-scm/scm"
 )
 
 type gitService struct {

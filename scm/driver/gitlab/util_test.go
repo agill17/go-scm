@@ -7,7 +7,7 @@ package gitlab
 import (
 	"testing"
 
-	"github.com/jenkins-x/go-scm/scm"
+	"github.com/agill17/go-scm/scm"
 )
 
 func Test_encodeListOptions(t *testing.T) {

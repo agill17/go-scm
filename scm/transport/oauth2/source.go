@@ -7,7 +7,7 @@ package oauth2
 import (
 	"context"
 
-	"github.com/jenkins-x/go-scm/scm"
+	"github.com/agill17/go-scm/scm"
 )
 
 // StaticTokenSource returns a TokenSource that always

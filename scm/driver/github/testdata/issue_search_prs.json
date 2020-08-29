@@ -196,7 +196,7 @@
       "labels_url": "https://api.github.com/repos/jenkins-x/go-scm/issues/29/labels{/name}",
       "comments_url": "https://api.github.com/repos/jenkins-x/go-scm/issues/29/comments",
       "events_url": "https://api.github.com/repos/jenkins-x/go-scm/issues/29/events",
-      "html_url": "https://github.com/jenkins-x/go-scm/pull/29",
+      "html_url": "https://github.com/agill17/go-scm/pull/29",
       "id": 493196740,
       "node_id": "MDExOlB1bGxSZXF1ZXN0MzE3MjIxMDEw",
       "number": 29,
@@ -243,9 +243,9 @@
       "author_association": "MEMBER",
       "pull_request": {
         "url": "https://api.github.com/repos/jenkins-x/go-scm/pulls/29",
-        "html_url": "https://github.com/jenkins-x/go-scm/pull/29",
-        "diff_url": "https://github.com/jenkins-x/go-scm/pull/29.diff",
-        "patch_url": "https://github.com/jenkins-x/go-scm/pull/29.patch"
+        "html_url": "https://github.com/agill17/go-scm/pull/29",
+        "diff_url": "https://github.com/agill17/go-scm/pull/29.diff",
+        "patch_url": "https://github.com/agill17/go-scm/pull/29.patch"
       },
       "body": "add a little CLI tool to lookup a PR",
       "score": 1.0

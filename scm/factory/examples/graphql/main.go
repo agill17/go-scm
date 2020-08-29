@@ -10,9 +10,9 @@ import (
 	githubql "github.com/shurcooL/githubv4"
 	"github.com/sirupsen/logrus"
 
-	"github.com/jenkins-x/go-scm/scm"
-	"github.com/jenkins-x/go-scm/scm/factory"
-	"github.com/jenkins-x/go-scm/scm/factory/examples/helpers"
+	"github.com/agill17/go-scm/scm"
+	"github.com/agill17/go-scm/scm/factory"
+	"github.com/agill17/go-scm/scm/factory/examples/helpers"
 )
 
 var (

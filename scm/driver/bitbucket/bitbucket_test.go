@@ -7,7 +7,7 @@ package bitbucket
 import (
 	"testing"
 
-	"github.com/jenkins-x/go-scm/scm"
+	"github.com/agill17/go-scm/scm"
 )
 
 func TestClient(t *testing.T) {

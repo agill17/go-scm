@@ -5,9 +5,9 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/jenkins-x/go-scm/scm"
-	"github.com/jenkins-x/go-scm/scm/factory"
-	"github.com/jenkins-x/go-scm/scm/factory/examples/helpers"
+	"github.com/agill17/go-scm/scm"
+	"github.com/agill17/go-scm/scm/factory"
+	"github.com/agill17/go-scm/scm/factory/examples/helpers"
 )
 
 func main() {

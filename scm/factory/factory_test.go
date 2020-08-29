@@ -4,8 +4,8 @@ import (
 	"net/http"
 	"testing"
 
-	"github.com/jenkins-x/go-scm/scm"
-	"github.com/jenkins-x/go-scm/scm/transport"
+	"github.com/agill17/go-scm/scm"
+	"github.com/agill17/go-scm/scm/transport"
 	"github.com/stretchr/testify/assert"
 )
 

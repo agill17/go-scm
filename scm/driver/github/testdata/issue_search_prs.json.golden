@@ -121,7 +121,7 @@
     "Number": 29,
     "Title": "fix: add another example program",
     "Body": "add a little CLI tool to lookup a PR",
-    "Link": "https://github.com/jenkins-x/go-scm/pull/29",
+    "Link": "https://github.com/agill17/go-scm/pull/29",
     "State": "open",
     "Labels": [
       "size/M"

@@ -10,8 +10,8 @@ import (
 	"log"
 	"net/http"
 
-	"github.com/jenkins-x/go-scm/scm"
-	"github.com/jenkins-x/go-scm/scm/driver/github"
+	"github.com/agill17/go-scm/scm"
+	"github.com/agill17/go-scm/scm/driver/github"
 )
 
 var ctx context.Context

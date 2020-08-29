@@ -13,7 +13,7 @@ import (
 
 	"github.com/google/go-cmp/cmp"
 	"github.com/h2non/gock"
-	"github.com/jenkins-x/go-scm/scm"
+	"github.com/agill17/go-scm/scm"
 )
 
 func TestContentFind(t *testing.T) {
