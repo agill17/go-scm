@@ -161,24 +161,30 @@ func convertPushHook(src *pushHook) *scm.PushHook {
 	if len(src.Commits) > 0 {
 		dst.Commit.Message = src.Commits[0].Message
 		dst.Commit.Link = src.Commits[0].URL
-		dst.Commits = converPushHookCommits(src)
+		dst.Commits = convertPushCommits(src.Commits)
 	}
 	return dst
 }
 
-func converPushHookCommits(src *pushHook) []scm.PushCommit {
-	var pushCommits []scm.PushCommit
-	for _, commit := range src.Commits{
-		scmPushCommit := scm.PushCommit{
-			ID: commit.ID,
-			Message: commit.Message,
-			Added: commit.Added,
-			Modified: commit.Modified,
-			Removed: commit.Removed,
-		}
-		pushCommits = append(pushCommits, scmPushCommit)
+func convertPushCommits(src []pushCommit) []scm.PushCommit {
+	var dst []scm.PushCommit
+	for _, s := range src {
+		dst = append(dst, *convertPushCommit(&s))
 	}
-	return pushCommits
+	if len(dst) == 0 {
+		return nil
+	}
+	return dst
+}
+
+func convertPushCommit(src *pushCommit) *scm.PushCommit {
+	return &scm.PushCommit{
+		ID:       src.ID,
+		Message:  src.Message,
+		Added:    src.Added,
+		Removed:  src.Removed,
+		Modified: src.Modified,
+	}
 }
 
 func converBranchHook(src *pushHook) *scm.BranchHook {
@@ -410,19 +416,7 @@ type (
 		UserAvatar   string      `json:"user_avatar"`
 		ProjectID    int         `json:"project_id"`
 		Project      project     `json:"project"`
-		Commits      []struct {
-			ID        string `json:"id"`
-			Message   string `json:"message"`
-			Timestamp string `json:"timestamp"`
-			URL       string `json:"url"`
-			Author    struct {
-				Name  string `json:"name"`
-				Email string `json:"email"`
-			} `json:"author"`
-			Added    []string      `json:"added"`
-			Modified []string `json:"modified"`
-			Removed  []string `json:"removed"`
-		} `json:"commits"`
+		Commits      []pushCommit `json:"commits"`
 		TotalCommitsCount int `json:"total_commits_count"`
 		Repository        struct {
 			Name            string `json:"name"`
@@ -433,6 +427,20 @@ type (
 			GitSSHURL       string `json:"git_ssh_url"`
 			VisibilityLevel int    `json:"visibility_level"`
 		} `json:"repository"`
+	}
+
+	pushCommit struct {
+		ID        string `json:"id"`
+		Message   string `json:"message"`
+		Timestamp string `json:"timestamp"`
+		URL       string `json:"url"`
+		Author    struct {
+			Name  string `json:"name"`
+			Email string `json:"email"`
+		} `json:"author"`
+		Added    []string      `json:"added"`
+		Modified []string `json:"modified"`
+		Removed  []string `json:"removed"`
 	}
 
 	commentHook struct {
