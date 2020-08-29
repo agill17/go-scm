@@ -161,8 +161,24 @@ func convertPushHook(src *pushHook) *scm.PushHook {
 	if len(src.Commits) > 0 {
 		dst.Commit.Message = src.Commits[0].Message
 		dst.Commit.Link = src.Commits[0].URL
+		dst.Commits = converPushHookCommits(src)
 	}
 	return dst
+}
+
+func converPushHookCommits(src *pushHook) []scm.PushCommit {
+	var pushCommits []scm.PushCommit
+	for _, commit := range src.Commits{
+		scmPushCommit := scm.PushCommit{
+			ID: commit.ID,
+			Message: commit.Message,
+			Added: commit.Added,
+			Modified: commit.Modified,
+			Removed: commit.Removed,
+		}
+		pushCommits = append(pushCommits, scmPushCommit)
+	}
+	return pushCommits
 }
 
 func converBranchHook(src *pushHook) *scm.BranchHook {
@@ -404,8 +420,8 @@ type (
 				Email string `json:"email"`
 			} `json:"author"`
 			Added    []string      `json:"added"`
-			Modified []interface{} `json:"modified"`
-			Removed  []interface{} `json:"removed"`
+			Modified []string `json:"modified"`
+			Removed  []string `json:"removed"`
 		} `json:"commits"`
 		TotalCommitsCount int `json:"total_commits_count"`
 		Repository        struct {

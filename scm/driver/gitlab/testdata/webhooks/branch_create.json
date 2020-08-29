@@ -40,15 +40,11 @@
         "name": "Sid Sijbrandij",
         "email": "noreply@gitlab.com"
       },
-      "added": [
-        
-      ],
+      "added": [],
       "modified": [
         "README.md"
       ],
-      "removed": [
-        
-      ]
+      "removed": []
     }
   ],
   "total_commits_count": 1,
